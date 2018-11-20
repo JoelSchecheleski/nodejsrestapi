@@ -27,9 +27,8 @@ app
 // ENDPOINTS CATEGORY ---------------------------------------
 app
     .route("/categorys")
-    .get(categoryController.readCategory)
-    .put(categoryController.updateCategory)
-    .delete(categoryController.deleteCategory);
+    .get(categoryController.listAllCategorys)
+    .post(categoryController.createNewCategory);
 app
     .route("/categorys/:categoryid")
     .get(categoryController.readCategory)
@@ -38,12 +37,11 @@ app
 
 // ENDPOINT ENTRY ------------------------------------------
 app
-    .route("entrys")
-    .get(entryController.readEntry)
-    .put(entryController.updateEntry)
-    .delete(entryController.deleteEntry);
+    .route("/entrys")
+    .get(entryController.listAllEntrys)
+    .post(entryController.createNewEntry);
 app
-    .route("entrys/:entryid")
+    .route("/entrys/:entryid")
     .get(entryController.readEntry)
     .put(entryController.updateEntry)
     .delete(entryController.deleteEntry);
