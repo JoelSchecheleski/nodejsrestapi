@@ -18,5 +18,6 @@ mongoose.connect(dbURI, options).then(
 );
 
 // require any models
-// require("../models/Task");
+require("../models/Task");
 require("../models/Category");
+require("../models/Entry");
